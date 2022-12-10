@@ -2,7 +2,8 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-// +build ios android
+// +build ios android linux
+// +build arm arm64
 
 package gl
 
@@ -12,7 +13,7 @@ package gl
 #ifdef os_ios
 #include <OpenGLES/ES2/glext.h>
 #endif
-#ifdef os_android
+#if defined(os_android) || defined(os_linux)
 #include <GLES2/gl2.h>
 #endif
 */
