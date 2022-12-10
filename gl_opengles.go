@@ -15,7 +15,7 @@ package gl
 #include <OpenGLES/ES2/glext.h>
 #endif
 #if defined(os_android) || defined(os_linux)
-#include <GLES3/gl3.h>
+#include <GLES3/gl32.h>
 #endif
 */
 import "C"
@@ -80,7 +80,7 @@ func BlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha Enum) 
 }
 
 func BlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1 int, mask, filter Enum) {
-	C.glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, C.GLbitfield(mask), filter.c())
+	C.glBlitFramebuffer(C.GLint(srcX0), C.GLint(srcY0), C.GLint(srcX1), C.GLint(srcY1), C.GLint(dstX0), C.GLint(dstY0), C.GLint(dstX1), C.GLint(dstY1), C.GLbitfield(mask), filter.c())
 }
 
 func BufferData(target Enum, src []byte, usage Enum) {
