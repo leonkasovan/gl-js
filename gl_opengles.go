@@ -2,9 +2,9 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-//go:build (ios || android || linux) && (js || arm || arm64)
+//go:build (ios || android || linux) && (arm || arm64)
 // +build ios android linux
-// +build js arm arm64
+// +build arm arm64
 
 package gl
 
