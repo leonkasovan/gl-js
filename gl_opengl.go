@@ -1,4 +1,4 @@
-// +build !js
+// +build !js,!arm,!arm64
 
 package gl
 
