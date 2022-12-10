@@ -1,5 +1,5 @@
-//go:build !js
-// +build !js
+//go:build !js && !arm && !arm64
+// +build !js,!arm,!arm64
 
 package gl
 
