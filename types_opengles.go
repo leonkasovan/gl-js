@@ -11,7 +11,7 @@ package gl
 /*
 #cgo ios     LDFLAGS: -framework OpenGLES
 #cgo android LDFLAGS: -lGLESv2
-#cgo linux LDFLAGS: -lGLESv2
+#cgo linux LDFLAGS: -lGLESv3
 
 #cgo ios     CFLAGS: -Dos_ios
 #cgo android CFLAGS: -Dos_android
@@ -21,7 +21,7 @@ package gl
 #include <OpenGLES/ES2/gl.h>
 #endif
 #if defined(os_android) || defined(os_linux)
-#include <GLES2/gl2.h>
+#include <GLES3/gl32.h>
 #endif
 
 void blendColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) { glBlendColor(r, g, b, a); }
