@@ -11,7 +11,7 @@ package gl
 /*
 #cgo ios     LDFLAGS: -framework OpenGLES
 #cgo android LDFLAGS: -lGLESv2
-#cgo linux LDFLAGS: -lGLESv3
+#cgo linux LDFLAGS: -lGLESv2
 
 #cgo ios     CFLAGS: -Dos_ios
 #cgo android CFLAGS: -Dos_android
