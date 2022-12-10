@@ -15,7 +15,7 @@ package gl
 #include <OpenGLES/ES2/glext.h>
 #endif
 #if defined(os_android) || defined(os_linux)
-#include <GLES2/gl2.h>
+#include <GLES3/gl3.h>
 #endif
 */
 import "C"
@@ -499,7 +499,7 @@ func LinkProgram(p Program) {
 func ObjectLabel(o Object, label string) {
 	str := unsafe.Pointer(C.CString(label))
 	defer C.free(str)
-	C.glObjectLabel(o.Identifier().c(), C.GLUint(o.Name()), -1, (*C.GLchar)(str))
+	C.glObjectLabel(o.Identifier().c(), C.GLuint(o.Name()), -1, (*C.GLchar)(str))
 }
 
 func PixelStorei(pname Enum, param int32) {
