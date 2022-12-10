@@ -11,14 +11,16 @@ package gl
 /*
 #cgo ios     LDFLAGS: -framework OpenGLES
 #cgo android LDFLAGS: -lGLESv2
+#cgo linux LDFLAGS: -lGLESv2
 
 #cgo ios     CFLAGS: -Dos_ios
 #cgo android CFLAGS: -Dos_android
+#cgo linux CFLAGS: -Dos_linux
 
 #ifdef os_ios
 #include <OpenGLES/ES2/gl.h>
 #endif
-#ifdef os_android
+#if defined(os_android) || defined(os_linux)
 #include <GLES2/gl2.h>
 #endif
 
