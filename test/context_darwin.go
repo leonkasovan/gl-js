@@ -41,7 +41,7 @@ import "C"
 import (
 	"runtime"
 
-	"github.com/fyne-io/gl-js"
+	"github.com/leonkasovan/gl-js"
 )
 
 // contextGL holds a copy of the OpenGL Context from thread-local storage.
