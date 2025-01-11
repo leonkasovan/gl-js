@@ -7,7 +7,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/go-gl/gl/v2.1/gl"
+	"github.com/leonkasovan/gl/v2.1/gl"
 )
 
 // ContextWatcher is this library's context watcher, satisfying glfw.ContextWatcher interface.
